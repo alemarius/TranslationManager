@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file datatype="xml" source-language="en-US" target-language="nl-BE" original="TEST1">
+    <body>
+      <group id="body">
+        <trans-unit id="Page 2430126745 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Translation Lines</source>
+          <target>der vertimu linijos</target>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 416846303 - Action 613244543 - Method 1377591017 - NamedType 848472796" size-unit="char" translate="yes">
+          <source>Language not selected</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Header - Action Import Language module txt - Method OnAction - NamedType ErrorTxt</note>
+        </trans-unit>
+        <trans-unit id="Page 416846303 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Translations Management</source>
+          <target>der Transl Managmenet</target>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 416846303 - Property 3863440606" size-unit="char" translate="yes">
+          <source>SPLN</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Header - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 4249460472 - Control 1096133539 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Translation 5</source>
+          <target>der vertimas 5</target>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Lines SP - Control Lang5 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4249460472 - Control 1733830156 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Translation 4</source>
+          <target>der vertimas 4</target>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Lines SP - Control Lang4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4249460472 - Control 2840314367 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Translation 1</source>
+          <target>der vertimas 1</target>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Lines SP - Control Lang1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4249460472 - Control 4115707601 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Translation 3</source>
+          <target>der vertimas 3</target>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Lines SP - Control Lang3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4249460472 - Control 458436922 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Translation 2</source>
+          <target>der vertimas 2</target>
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Page SPLN Translation Lines SP - Control Lang2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 1096133539 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Lang5</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Lang5 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 1249153543 - Property 2879900210" size-unit="char" translate="yes">
+          <source>source</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field source - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 1500270045 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Note2Annotates</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Note2Annotates - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 1733830156 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Lang4</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Lang4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 1929321607 - Property 2879900210" size-unit="char" translate="yes">
+          <source>XMLSpace</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field XMLSpace - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 2072701348 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Note2Priority</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Note2Priority - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 2302108013 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Note1Priority</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Note1Priority - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 2326097852 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Note1Annotates</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Note1Annotates - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 2377891091 - Property 2879900210" size-unit="char" translate="yes">
+          <source>al-object-target</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field al-object-target - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 2609536032 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Note2From</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Note2From - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 2686962215 - Property 2879900210" size-unit="char" translate="yes">
+          <source>id</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 2840314367 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Lang1</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Lang1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 297530546 - Property 2879900210" size-unit="char" translate="yes">
+          <source>size-unit</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field size-unit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 2982838419 - Property 2879900210" size-unit="char" translate="yes">
+          <source>note1</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field note1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 3861560169 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Note1From</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Note1From - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 3960580138 - Property 2879900210" size-unit="char" translate="yes">
+          <source>translate</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field translate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 4115707601 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Lang3</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Lang3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 458436922 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Lang2</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Lang2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 600960974 - Property 2879900210" size-unit="char" translate="yes">
+          <source>note2</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field note2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2430126745 - Field 949148548 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Project ID</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Lines - Field Project ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 353448859 - Field 1358710565 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Translation</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translations - Field Translation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 353448859 - Field 2017693284 - Property 2879900210" size-unit="char" translate="yes">
+          <source>ProjectCode</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translations - Field Project Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 353448859 - Field 2397723431 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Source</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translations - Field Source - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 353448859 - Field 3676432449 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Language Id</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translations - Field Language Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 416846303 - Field 118697375 - Property 2879900210" size-unit="char" translate="yes">
+          <source>LanguageCases</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Header - Field LanguageCases - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 416846303 - Field 2017693284 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Project Id</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Header - Field Project Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 416846303 - Field 228563886 - Property 2879900210" size-unit="char" translate="yes">
+          <source>LanguageDataType</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Header - Field LanguageDataType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 416846303 - Field 3598723230 - Property 2879900210" size-unit="char" translate="yes">
+          <source>TranslationNo</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Header - Field TranslationNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 416846303 - Field 3676432449 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Language Id</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Header - Field Language Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 416846303 - Field 4009598075 - Property 2879900210" size-unit="char" translate="yes">
+          <source>LangCode</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">Table SPLN Translation Header - Field LangCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 3844023773 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Import Translation Source</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort BAC Import Translation Source - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="XmlPort 943331973 - Property 2879900210" size-unit="char" translate="yes">
+          <source>Import translation XML</source>
+          <target />
+          <note from="Developer" annotates="general" priority="2" />
+          <note from="Xliff Generator" annotates="general" priority="3">XmlPort SPLN Import Tranls XML - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

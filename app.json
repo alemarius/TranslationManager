@@ -1,0 +1,26 @@
+{
+  "id": "2c668b87-4f8b-4d9f-972e-91e037aaaaac",
+  "name": "Translation Manager",
+  "publisher": "AleMar",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "screenshots": [],
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [
+    {
+      "from": 69200,
+      "to": 69300
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://simplanova.com/blog",
+  "showMyCode": true,
+  "runtime": "3.0",
+  "features": ["TranslationFile"]
+}
