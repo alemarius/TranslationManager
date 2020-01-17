@@ -98,6 +98,23 @@ page 69201 "SPLN Translation Header"
                 end;
             }
 
+            action("Import Language from XML")
+            {
+                ApplicationArea = All;
+                trigger OnAction()
+                var
+                    ImportXML: XmlPort "Import Translation From XML";
+                begin
+                    if "Project Id" = '' then
+                        Error('Create project ID first');
+                    ImportXML.SetParameters(Rec);
+                    ImportXML.Run();
+                    CurrPage.Update();
+
+                    addLanguageHeaders("Project ID");
+                end;
+            }
+
             action("Recreate Language Headers")
             {
                 ApplicationArea = All;

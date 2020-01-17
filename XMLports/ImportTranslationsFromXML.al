@@ -4,8 +4,7 @@ xmlport 69206 "Import Translation From XML"
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
     Direction = Import;
     Encoding = UTF8;
-    //FileName = 'C:\Users\Simple\Desktop\Translations\ChemDisFull.g.xlf';
-    XmlVersionNo = V10;
+    XmlVersionNo = V11;
     Format = Xml;
     PreserveWhiteSpace = true;
     UseDefaultNamespace = true;
@@ -78,20 +77,21 @@ xmlport 69206 "Import Translation From XML"
                             {
 
                             }
-                            textelement(target1)
+                            textelement(target)
                             {
-                                XmlName = 'target';
+                                // XmlName = 'target';
                                 MinOccurs = Zero;
 
                                 trigger OnAfterAssignVariable()
                                 begin
-
+                                    CreateTempTranslation(TranslationHeader."Project Id", TargetLang, source, target);
                                 end;
 
                             }
 
                             textelement(note)
                             {
+                                MinOccurs = Zero;
                                 textattribute(from)
                                 {
 
@@ -104,11 +104,14 @@ xmlport 69206 "Import Translation From XML"
                                 {
 
                                 }
+
+                                trigger OnAfterAssignVariable()
+                                begin
+                                end;
                             }
 
                             trigger OnAfterAssignVariable()
                             begin
-
                             end;
                         }
                     }
@@ -116,6 +119,15 @@ xmlport 69206 "Import Translation From XML"
             }
         }
     }
+    trigger OnInitXmlPort()
+    begin
+        Error('Work in progress, use line analyzer XML');
+    end;
+
+    trigger OnPostXmlPort()
+    begin
+        InsertTranslations();
+    end;
 
     var
         TargetLang: Integer;
@@ -139,17 +151,31 @@ xmlport 69206 "Import Translation From XML"
             'es-ES':
                 exit(1034);
             else
-                exit(0);
+                error('No lang code hardcoded');
         end;
     end;
 
-    procedure CreateTempTranslation(ProjCode: Code[10]; Source: Text; Target: Text)
+    procedure CreateTempTranslation(ProjCode: Code[10]; LangID: Integer; Source: Text; Target: Text)
     begin
         If StrLen(Source) > 400 then
             exit;
         TempTranslations.Init;
         TempTranslations."Project Id" := ProjCode;
+        TempTranslations."Language Id" := LangID;
         TempTranslations.Source := Source;
-        TempTranslations.Translation :=
+        TempTranslations.Translation := Target;
+        If not TempTranslations.Insert() then
+            TempTranslations.Delete();
+    end;
+
+    procedure InsertTranslations()
+    var
+        Translations: Record "SPLN Translations";
+    begin
+        if TempTranslations.FindSet() then
+            repeat
+                Translations := TempTranslations;
+                if Translations.Insert() then;
+            until TempTranslations.Next() = 0;
     end;
 }
