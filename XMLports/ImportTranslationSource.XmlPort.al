@@ -1,4 +1,4 @@
-xmlport 69205 "SPLN Import Translation Source"
+xmlport 69205 "Import Translation Source"
 {
     Caption = 'Import Translation Source';
     DefaultNamespace = 'urn:oasis:names:tc:xliff:document:1.2';
@@ -151,11 +151,11 @@ xmlport 69205 "SPLN Import Translation Source"
     end;
 
     var
-        TranslationHeader: Record "SPLN Translation Header";
+        TranslationHeader: Record "Translation Header";
         LanguageId: Integer;
-        TranslationLines: Record "SPLN Translation Lines";
+        TranslationLines: Record "Translation Lines";
 
-    procedure SetParameters(newTranslationHeader: Record "SPLN Translation Header")
+    procedure SetParameters(newTranslationHeader: Record "Translation Header")
     begin
         TranslationHeader := newTranslationHeader;
     end;

@@ -132,11 +132,11 @@ xmlport 69206 "Import Translation From XML"
     var
         TargetLang: Integer;
 
-        TranslationHeader: Record "SPLN Translation Header";
+        TranslationHeader: Record "Translation Header";
         LanguageId: Integer;
-        TempTranslations: Record "SPLN Translations" temporary;
+        TempTranslations: Record "Translations" temporary;
 
-    procedure SetParameters(newTranslationHeader: Record "SPLN Translation Header")
+    procedure SetParameters(newTranslationHeader: Record "Translation Header")
     begin
         TranslationHeader := newTranslationHeader;
     end;
@@ -170,7 +170,7 @@ xmlport 69206 "Import Translation From XML"
 
     procedure InsertTranslations()
     var
-        Translations: Record "SPLN Translations";
+        Translations: Record "Translations";
     begin
         if TempTranslations.FindSet() then
             repeat

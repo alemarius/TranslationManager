@@ -1,4 +1,4 @@
-xmlport 69202 "SPLN Trans Import Language Mod"
+xmlport 69202 "Trans Import Language Mod"
 {
     Format = VariableText;
     UseRequestPage = false;
@@ -8,7 +8,7 @@ xmlport 69202 "SPLN Trans Import Language Mod"
     {
         textelement(root)
         {
-            tableelement("Language Map"; "SPLN Translations")
+            tableelement("Language Map"; "Translations")
             {
                 AutoSave = false;
                 XmlName = 'LanguageMap';
@@ -41,9 +41,9 @@ xmlport 69202 "SPLN Trans Import Language Mod"
 
     var
         ProjectCode: Code[10];
-        //TempLanguageMap: Record "SPLN Language Map" temporary;
+        //TempLanguageMap: Record "Language Map" temporary;
         //TooLong: Boolean;
-        tempTranslation: Record "SPLN Translations" temporary;
+        tempTranslation: Record "Translations" temporary;
 
 
     local procedure SolveLine()
@@ -96,7 +96,7 @@ xmlport 69202 "SPLN Trans Import Language Mod"
         end;
     end;
 
-    procedure SetParameter(TranslHeader: Record "SPLN Translation Header")
+    procedure SetParameter(TranslHeader: Record "Translation Header")
     begin
         ProjectCode := TranslHeader."Project ID";
     end;
@@ -140,9 +140,9 @@ xmlport 69202 "SPLN Trans Import Language Mod"
         Clear(tempTranslation);
     end;
 
-    procedure insertTranslation(tempTransl: Record "SPLN Translations")
+    procedure insertTranslation(tempTransl: Record "Translations")
     var
-        Translation: Record "SPLN Translations";
+        Translation: Record "Translations";
     begin
         Translation := tempTranslation;
 

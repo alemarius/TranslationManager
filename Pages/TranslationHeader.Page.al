@@ -1,10 +1,10 @@
-page 69201 "SPLN Translation Header"
+page 69201 "Translation Header"
 {
     PageType = List;
-    SourceTable = "SPLN Translation Header";
+    SourceTable = "Translation Header";
     ApplicationArea = All;
     UsageCategory = Administration;
-    AdditionalSearchTerms = 'SPLN';
+    AdditionalSearchTerms = 'MAL';
     Caption = 'Translations Management';
 
     layout
@@ -40,7 +40,7 @@ page 69201 "SPLN Translation Header"
             }
             group("Translations Preview")
             {
-                part(Control1000000008; "SPLN Translation Lines SP")
+                part(Control1000000008; "Translation Lines SP")
                 {
                     ApplicationArea = All;
                     SubPageLink = "Project ID" = FIELD("Project ID");
@@ -48,7 +48,7 @@ page 69201 "SPLN Translation Header"
             }
             group("By Language")
             {
-                part(Control1000000013; "SPLN Translations")
+                part(Control1000000013; "Translations")
                 {
                     ApplicationArea = All;
                     SubPageLink = "Language Id" = FIELD("Language Id");
@@ -67,7 +67,7 @@ page 69201 "SPLN Translation Header"
 
                 trigger OnAction()
                 var
-                    ImportOriginal: XMLport "SPLN Import Translation Source";
+                    ImportOriginal: XMLport "Import Translation Source";
                 begin
                     ImportOriginal.SetParameters(Rec);
                     ImportOriginal.Run();
@@ -80,7 +80,7 @@ page 69201 "SPLN Translation Header"
 
                 trigger OnAction()
                 var
-                    ImportLangModule: XmlPort "SPLN Trans Import Language Mod";
+                    ImportLangModule: XmlPort "Trans Import Language Mod";
                     ErrorTxt: Label 'Language not selected';
                     Tempblob: Record TempBlob temporary;
                     Instream: InStream;
@@ -98,12 +98,29 @@ page 69201 "SPLN Translation Header"
                 end;
             }
 
-            action("Import Language from XML")
+            action("Import Language from XML (not yet working)")
             {
                 ApplicationArea = All;
                 trigger OnAction()
                 var
                     ImportXML: XmlPort "Import Translation From XML";
+                begin
+                    if "Project Id" = '' then
+                        Error('Create project ID first');
+                    ImportXML.SetParameters(Rec);
+                    ImportXML.Run();
+                    CurrPage.Update();
+
+                    addLanguageHeaders("Project ID");
+                end;
+            }
+
+            action("Import Language from XML as line")
+            {
+                ApplicationArea = All;
+                trigger OnAction()
+                var
+                    ImportXML: XmlPort "Import XML transl as Line";
                 begin
                     if "Project Id" = '' then
                         Error('Create project ID first');
@@ -131,8 +148,8 @@ page 69201 "SPLN Translation Header"
 
                 trigger OnAction()
                 var
-                    TranslationLines: Record "SPLN Translation Lines";
-                    Translations: Record "SPLN Translations";
+                    TranslationLines: Record "Translation Lines";
+                    Translations: Record "Translations";
                 begin
                     TranslationLines.SetRange("Project ID", "Project ID");
                     if TranslationLines.FindSet() then
@@ -170,7 +187,7 @@ page 69201 "SPLN Translation Header"
 
                 trigger OnAction()
                 var
-                    ExportXml: XMLport "SPLN ExportTranslationFiles";
+                    ExportXml: XMLport "ExportTranslationFiles";
                     // tempBlob: Codeunit "Temp Blob";
                     varOutStream: OutStream;
                     FileManagement: Codeunit "File Management";
@@ -187,8 +204,8 @@ page 69201 "SPLN Translation Header"
 
                 trigger OnAction()
                 var
-                    TranslationHeader: Record "SPLN Translation Header";
-                    TranslationLines: Record "SPLN Translation Lines";
+                    TranslationHeader: Record "Translation Header";
+                    TranslationLines: Record "Translation Lines";
                 begin
                     TranslationLines.SetRange("Project ID", "Project ID");
                     TranslationLines.DeleteAll();
@@ -201,7 +218,7 @@ page 69201 "SPLN Translation Header"
 
                 trigger OnAction()
                 var
-                    LanguageMap: Record "SPLN Translations";
+                    LanguageMap: Record "Translations";
                 begin
                     LanguageMap.SetRange("Project Id", "Project ID");
                     LanguageMap.DeleteAll();
@@ -214,7 +231,7 @@ page 69201 "SPLN Translation Header"
 
                 trigger OnAction()
                 var
-                    TranslationLines: Record "SPLN Translation Lines";
+                    TranslationLines: Record "Translation Lines";
                 begin
                     TranslationLines.SetRange("Project ID", "Project ID");
                     case TranslationNo of
@@ -231,7 +248,7 @@ page 69201 "SPLN Translation Header"
                         else
                             Error('Please select Translation No');
                     end;
-                    Page.Run(Page::"SPLN Translation Lines", TranslationLines);
+                    Page.Run(Page::"Translation Lines", TranslationLines);
                 end;
             }
         }
@@ -239,7 +256,7 @@ page 69201 "SPLN Translation Header"
 
     local procedure addTranslation(ProjCode: code[10]; LangId: Integer; SourceCode: Text; var translationText: Text)
     var
-        Translations: Record "SPLN Translations";
+        Translations: Record "Translations";
     begin
         if Translations.get(ProjCode, LangId, SourceCode) then
             translationText := Translations.Translation;
@@ -247,10 +264,10 @@ page 69201 "SPLN Translation Header"
 
     local procedure addLanguageHeaders(ProjId: Code[10])
     var
-        tempHeaders: Record "SPLN Translation Header" temporary;
-        Translations: Record "SPLN Translations";
+        tempHeaders: Record "Translation Header" temporary;
+        Translations: Record "Translations";
         tempLang: Integer;
-        Headers: record "SPLN Translation Header";
+        Headers: record "Translation Header";
     begin
         Translations.SetRange("Project Id", ProjId);
 

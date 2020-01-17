@@ -1,4 +1,4 @@
-xmlport 69200 "SPLN ExportTranslationFiles"
+xmlport 69200 "ExportTranslationFiles"
 {
     Direction = Export;
     Encoding = UTF8;
@@ -28,7 +28,7 @@ xmlport 69200 "SPLN ExportTranslationFiles"
             //         version := '1.2';
             //     end;
             // }
-            tableelement("Translation Header"; "SPLN Translation Header")
+            tableelement("Translation Header"; "Translation Header")
             {
                 XmlName = 'file';
                 textattribute(datatype)
@@ -85,7 +85,7 @@ xmlport 69200 "SPLN ExportTranslationFiles"
                                 id1 := 'body';
                             end;
                         }
-                        tableelement("Translation Lines"; "SPLN Translation Lines")
+                        tableelement("Translation Lines"; "Translation Lines")
                         {
                             XmlName = 'trans-unit';
                             LinkTable = "Translation Header";
@@ -161,7 +161,7 @@ xmlport 69200 "SPLN ExportTranslationFiles"
         }
     }
 
-    procedure setParameters(Header: Record "SPLN Translation Header")
+    procedure setParameters(Header: Record "Translation Header")
     begin
         "Translation Header".SetRange("Project Id", Header."Project Id");
         "Translation Header".SetRange("Language Id", Header."Language Id");

@@ -1,4 +1,4 @@
-table 69204 "SPLN Translations"
+table 69204 "Translations"
 {
     DataClassification = ToBeClassified;
 

@@ -1,4 +1,4 @@
-table 69202 "SPLN Translation Lines"
+table 69202 "Translation Lines"
 {
 
     fields

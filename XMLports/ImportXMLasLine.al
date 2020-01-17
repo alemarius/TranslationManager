@@ -2,13 +2,14 @@ xmlport 69233 "Import XML transl as Line"
 {
     Format = VariableText;
     UseRequestPage = false;
-    //FieldSeparator = '<:>';
+    Direction = Import;
+    FieldSeparator = '<:::::>';
 
     schema
     {
         textelement(root)
         {
-            tableelement("Language Map"; "SPLN Translations")
+            tableelement("Language Map"; "Translations")
             {
                 AutoSave = false;
                 XmlName = 'LanguageMap';
@@ -31,114 +32,50 @@ xmlport 69233 "Import XML transl as Line"
             Error('No Project Selected');
     end;
 
+    trigger OnPostXmlPort()
+    begin
+        InsertTranslations();
+    end;
+
     var
         ProjectCode: Code[10];
-        //TempLanguageMap: Record "SPLN Language Map" temporary;
-        //TooLong: Boolean;
-        tempTranslation: Record "SPLN Translations" temporary;
-        TempTranslations: Record "SPLN Translations" temporary;
+
+        TempTranslations: Record "Translations" temporary;
 
     local procedure SolveLine()
     var
         Pos: Integer;
+        PosEnd: Integer;
         CodeLine: Text;
         TranslationLine: Text;
-        LastCode: Code[10];
-        LangCode: Code[10];
         LangId: Integer;
     begin
-        Pos := StrPos(Line, ':');
-        if Pos = 0 then
-            exit;
+        if TargetLang = 0 then begin
+            Pos := StrPos(Line, 'target-language=');
+            if Pos = 0 then
+                exit;
+            Line := CopyStr(Line, Pos + 17, 5);
+            TargetLang := GetLangIdFromXML(Line);
+        end;
 
-        CodeLine := CopyStr(Line, 1, Pos - 1);
-        TranslationLine := CopyStr(Line, Pos + 1);
-        if (TranslationLine = '') or (CodeLine = '') then
-            exit;
 
-        GetValues(CodeLine, LastCode, LangCode);
-
-        if (LastCode <> 'L999') or (LangCode = '') or (LangCode = '1') then begin
-            SolveTranslation();
+        Pos := StrPos(Line, '<source>');
+        if Pos <> 0 then begin
+            Source := CopyStr(Line, Pos + 8, StrPos(Line, '</source>') - Pos - 8);
             exit;
         end;
-        if StrLen(TranslationLine) > 380 then
-            exit;
-        Evaluate(LangId, LangCode);
-        addTranslation(ProjectCode, LangId, TranslationLine);
-    end;
 
-    local procedure GetValues(var TextLine: Text; var LastCode: Code[4]; var LangId: Code[10])
-    var
-        Pos: Integer;
-        TempLine: Text[50];
-    begin
-        while StrLen(TextLine) > 0 do begin
-            Pos := StrPos(TextLine, '-');
-            if Pos = 0 then begin
-                LastCode := TextLine;
-                TextLine := '';
-            end else begin
-                TempLine := CopyStr(TextLine, 1, Pos - 1);
-                TextLine := DelStr(TextLine, 1, Pos);
-                if StrLen(TempLine) < 12 then
-                    if TempLine[1] = 'A' then
-                        LangId := CopyStr(TempLine, 2, 5);
-            end;
+        Pos := StrPos(Line, '<target>');
+        if Pos <> 0 then begin
+            Target := CopyStr(Line, Pos + 8, StrPos(Line, '</target>') - Pos - 8);
+            CreateTempTranslation(ProjectCode, TargetLang, Source, Target);
+            exit;
         end;
     end;
 
-    procedure SetParameter(TranslHeader: Record "SPLN Translation Header")
+    procedure SetParameters(TranslHeader: Record "Translation Header")
     begin
         ProjectCode := TranslHeader."Project ID";
-    end;
-
-    procedure addTranslation(PrCode: code[10]; LangId: Integer; TranslText: Text[1024])
-    begin
-        tempTranslation.Init();
-        tempTranslation."Project Id" := PrCode;
-        tempTranslation."Language Id" := LangId;
-        tempTranslation.Translation := TranslText;
-        if not tempTranslation.Insert() then begin
-            solveTranslation();
-
-            tempTranslation.Init();
-            tempTranslation."Project Id" := PrCode;
-            tempTranslation."Language Id" := LangId;
-            tempTranslation.Translation := TranslText;
-            tempTranslation.Insert();
-            exit;
-        end;
-    end;
-
-    procedure SolveTranslation()
-    var
-        translSource: text[400];
-    begin
-        tempTranslation.SetRange("Language Id", 1033);
-        if tempTranslation.FindFirst() then begin
-            translSource := tempTranslation.Translation;
-            tempTranslation.Delete();
-            tempTranslation.Reset();
-            if tempTranslation.FindSet() then begin
-                repeat
-                    tempTranslation.Source := translSource;
-                    insertTranslation(tempTranslation);
-                until tempTranslation.Next() = 0;
-            end;
-        end;
-        tempTranslation.Reset();
-        tempTranslation.DeleteAll();
-        Clear(tempTranslation);
-    end;
-
-    procedure insertTranslation(tempTransl: Record "SPLN Translations")
-    var
-        Translation: Record "SPLN Translations";
-    begin
-        Translation := tempTranslation;
-
-        if not Translation.Insert() then;
     end;
 
     procedure GetLangIdFromXML(XMlLang: Text): Integer
@@ -155,22 +92,22 @@ xmlport 69233 "Import XML transl as Line"
         end;
     end;
 
-    procedure CreateTempTranslation(ProjCode: Code[10]; LangID: Integer; Source: Text; Target: Text)
+    procedure CreateTempTranslation(pProjCode: Code[10]; pLangID: Integer; pSource: Text; pTarget: Text)
     begin
-        If StrLen(Source) > 400 then
+        If StrLen(pSource) > 400 then
             exit;
         TempTranslations.Init;
-        TempTranslations."Project Id" := ProjCode;
-        TempTranslations."Language Id" := LangID;
-        TempTranslations.Source := Source;
-        TempTranslations.Translation := Target;
+        TempTranslations."Project Id" := pProjCode;
+        TempTranslations."Language Id" := pLangID;
+        TempTranslations.Source := pSource;
+        TempTranslations.Translation := pTarget;
         If not TempTranslations.Insert() then
             TempTranslations.Delete();
     end;
 
     procedure InsertTranslations()
     var
-        Translations: Record "SPLN Translations";
+        Translations: Record "Translations";
     begin
         if TempTranslations.FindSet() then
             repeat
@@ -178,5 +115,10 @@ xmlport 69233 "Import XML transl as Line"
                 if Translations.Insert() then;
             until TempTranslations.Next() = 0;
     end;
+
+    var
+        TargetLang: Integer;
+        Source: Text;
+        Target: Text;
 }
 

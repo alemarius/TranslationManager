@@ -1,7 +1,8 @@
-page 69200 "SPLN Translation Lines SP"
+page 69205 "Translation Lines"
 {
-    PageType = ListPart;
-    SourceTable = "SPLN Translation Lines";
+    PageType = List;
+    SourceTable = "Translation Lines";
+    Caption = 'Translation Lines';
 
     layout
     {
@@ -37,27 +38,22 @@ page 69200 "SPLN Translation Lines SP"
                 }
                 field(Lang1; Lang1)
                 {
-                    Caption = 'Translation 1';
                     ApplicationArea = All;
                 }
                 field(Lang2; Lang2)
                 {
-                    Caption = 'Translation 2';
                     ApplicationArea = All;
                 }
                 field(Lang3; Lang3)
                 {
-                    Caption = 'Translation 3';
                     ApplicationArea = All;
                 }
                 field(Lang4; Lang4)
                 {
-                    Caption = 'Translation 4';
                     ApplicationArea = All;
                 }
                 field(Lang5; Lang5)
                 {
-                    Caption = 'Translation 5';
                     ApplicationArea = All;
                 }
             }

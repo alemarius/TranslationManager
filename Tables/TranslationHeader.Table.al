@@ -1,4 +1,4 @@
-table 69201 "SPLN Translation Header"
+table 69201 "Translation Header"
 {
 
     fields
@@ -51,7 +51,7 @@ table 69201 "SPLN Translation Header"
         field(30; LanguageCases; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count ("SPLN Translations" where(
+            CalcFormula = count ("Translations" where(
                         "Project Id" = field("Project ID"),
                         "Language Id" = field("Language Id")
                         ));
@@ -71,7 +71,7 @@ table 69201 "SPLN Translation Header"
 
     trigger OnDelete()
     var
-        Translations: Record "SPLN Translations";
+        Translations: Record "Translations";
     begin
         Translations.SetRange("Project Id", "Project ID");
         Translations.SetRange("Language Id", "Language Id");

@@ -1,9 +1,9 @@
-page 69206 "SPLN Translations"
+page 69206 "Translations"
 {
     PageType = ListPart;
     ApplicationArea = All;
     UsageCategory = Administration;
-    SourceTable = "SPLN Translations";
+    SourceTable = "Translations";
 
     layout
     {
