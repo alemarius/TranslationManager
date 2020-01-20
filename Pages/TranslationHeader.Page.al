@@ -69,6 +69,8 @@ page 69201 "Translation Header"
                 var
                     ImportOriginal: XMLport "Import Translation Source";
                 begin
+                    if "Project Id" = '' then
+                        Error('Create project ID first');
                     ImportOriginal.SetParameters(Rec);
                     ImportOriginal.Run();
                     CurrPage.Update();
@@ -87,6 +89,8 @@ page 69201 "Translation Header"
                     FileManagment: Codeunit "File Management";
                     SourceFilePathGbl: Text;
                 begin
+                    if "Project Id" = '' then
+                        Error('Create project ID first');
                     SourceFilePathGbl := FileManagment.OpenFileDialog('Select File', SourceFilePathGbl, '');
                     Tempblob.Blob.Import(SourceFilePathGbl);
                     Tempblob.Blob.CreateInStream(Instream, TextEncoding::UTF16);
