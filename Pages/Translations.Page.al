@@ -4,6 +4,7 @@ page 69206 "Translations"
     ApplicationArea = All;
     UsageCategory = Administration;
     SourceTable = "Translations";
+    AdditionalSearchTerms = 'MAL';
 
     layout
     {

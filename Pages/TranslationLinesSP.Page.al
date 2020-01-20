@@ -2,6 +2,7 @@ page 69200 "Translation Lines SP"
 {
     PageType = ListPart;
     SourceTable = "Translation Lines";
+    AdditionalSearchTerms = 'MAL';
 
     layout
     {

@@ -3,6 +3,7 @@ page 69205 "Translation Lines"
     PageType = List;
     SourceTable = "Translation Lines";
     Caption = 'Translation Lines';
+    AdditionalSearchTerms = 'MAL';
 
     layout
     {
