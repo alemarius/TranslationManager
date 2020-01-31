@@ -11,7 +11,7 @@ table 69206 ObjectList
         }
         field(2; "Object Type"; Option)
         {
-            OptionMembers = Table,Page,Report,Codeunit,XMLPort;
+            OptionMembers = Table,Page,Report,Codeunit,XMLPort,"TableExtension","PageExtension";
             DataClassification = CustomerContent;
         }
         field(10; "Object Name"; Text[50])
@@ -35,14 +35,16 @@ table 69206 ObjectList
         }
     }
 
+    var
+        "Label - test": Label 'WTFTEST';
+
     procedure addObject(note2: Text[250]; pProjId: Code[10])
     var
         TempType: Text;
     begin
         Init();
         "Project Id" := pProjId;
-
-        // TempType :=
+        //TempType := CopyStr()
 
     end;
 

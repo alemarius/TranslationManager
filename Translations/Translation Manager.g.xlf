@@ -3,6 +3,31 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="Translation Manager">
     <body>
       <group id="body">
+        <trans-unit id="Table 1838938174 - Field 2017693284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Project Id</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Object - List - Field Project Id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838938174 - Field 1085746399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Type</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Object - List - Field Object Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838938174 - Field 1418569422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Object Name</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Object - List - Field Object Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838938174 - Field 1090351696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Active</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Object - List - Field Active - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1838938174 - NamedType 3864259487" size-unit="char" translate="yes" xml:space="preserve">
+          <source>WTFTEST</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Object - List - NamedType Label - test</note>
+        </trans-unit>
         <trans-unit id="Table 3219295824 - Field 2017693284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Project Id</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -158,6 +183,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Translation Lines - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 28547554 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Translation Lines - Property AdditionalSearchTerms</note>
+        </trans-unit>
         <trans-unit id="Table 2653012956 - Field 2017693284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>ProjectCode</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -177,6 +207,16 @@
           <source>Translation</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Translations - Field Translation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2653012956 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Translations - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 3556461943 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MAL</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Translation Lines SP - Property AdditionalSearchTerms</note>
         </trans-unit>
         <trans-unit id="Page 3556461943 - Control 2840314367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Translation 1</source>
